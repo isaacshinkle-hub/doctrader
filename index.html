@@ -1,33 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DocTrader — Market notes, videos, and a watchlist</title>
-<meta name="description" content="DocTrader: trading notes and a public watchlist. Sister site to DocDiver.">
-<link rel="canonical" href="https://doctrader.org/">
-<style>
-  :root { --bg:#0f1115; --ink:#f3efe6; --muted:#a8a093; --accent:#d8a45a; --line:#2a2d34; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { min-height: 100vh; background: var(--bg); color: var(--ink); font-family: Georgia, "Times New Roman", serif; line-height: 1.6; }
-  main { max-width: 42rem; margin: 0 auto; padding: 18vh 1.5rem 4rem; }
-  p.kicker { color: var(--accent); letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; font-family: system-ui, sans-serif; }
-  h1 { font-size: clamp(2.4rem, 7vw, 4rem); font-weight: 400; margin: .4rem 0 1rem; }
-  p { color: var(--muted); font-size: 1.1rem; }
-  nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-  a { color: var(--ink); }
-  a.btn { display: inline-block; padding: .65rem 1rem; border: 1px solid var(--line); text-decoration: none; font-family: system-ui, sans-serif; font-size: .9rem; }
-  a.btn.primary { border-color: var(--accent); color: var(--accent); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DocTrader — Dr. Ting's market notebook</title>
+  <meta name="description" content="Dr. Ting's trading site: a live watchlist dashboard, a morning market update every trading day, and her tips for trading stocks. Not financial advice.">
+  <link rel="canonical" href="https://doctrader.org/">
+  <meta property="og:title" content="DocTrader — Dr. Ting's market notebook">
+  <meta property="og:description" content="Dr. Ting's trading site: a live watchlist dashboard, a morning market update every trading day, and her tips for trading stocks. Not financial advice.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://doctrader.org/assets/img/avatar-square.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0a07'/%3E%3Cpath d='M9 6v20M6 11h6v9H6zM23 4v24M20 9h6v13h-6z' fill='%23e8b84a' stroke='%23e8b84a' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<main>
-  <p class="kicker">Holding page</p>
-  <h1>DocTrader</h1>
-  <p>Market notes, videos, and a public watchlist. This domain is live on GitHub Pages. Full site comes next.</p>
-  <nav>
-    <a class="btn primary" href="https://docdiver.org/">DocDiver</a>
-  </nav>
+<body data-root="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="DocTrader home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1c1711"/><path d="M9 6v20M6 11h6v9H6zM23 4v24M20 9h6v13h-6z" fill="#e8b84a" stroke="#e8b84a" stroke-width="1.5"/></svg>
+      <span>Doc<b>Trader</b></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="updates.html">Morning Update</a></li>
+      <li><a href="tips.html">Tips &amp; Secrets</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="sister" href="https://docdiver.org/" title="Sister site: Dr. Ting's adventures">DocDiver ↗</a></li>
+    </ul>
+  </div>
+</header>
+<div class="tape"><div class="wrap" style="padding:0"><div id="ticker-tape" aria-label="Watchlist ticker tape"></div></div></div>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap hero-row">
+      <div>
+        <span class="eyebrow">Dr. Ting's market notebook</span>
+        <h1>Market notes, written down. Every morning.</h1>
+        <p class="lede">A live dashboard of the stocks I'm watching, a short update before every open, and the rules I actually trade by. My own process, in public — a notebook, not a signal service.</p>
+        <div class="actions">
+          <a class="btn" href="dashboard.html">Open the dashboard</a>
+          <a class="btn green" href="updates.html">Today's morning update</a>
+        </div>
+        <div class="byline" style="margin-top:22px">
+          <img class="avatar sm" src="assets/img/avatar-face.png" alt="">
+          <span><b>Dr. Ting</b>Trader, traveler, note-taker</span>
+        </div>
+      </div>
+      <img class="avatar lg" src="assets/img/avatar.png" alt="Dr. Ting" width="220" height="220">
+    </div>
+    <div class="wrap">
+      <p class="disclaimer" style="margin-top:28px"><strong>Not financial advice.</strong> Everything on this site is my personal opinion and a record of my own decisions. I may hold positions in anything mentioned. Do your own research and talk to a licensed professional before acting on anything here. <a href="about.html#disclaimer">Full disclaimer →</a></p>
+    </div>
+    <svg class="skyline" viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b3222"/><stop offset="1" stop-color="#0a0907"/></linearGradient></defs>
+      <!-- generic downtown skyline silhouette -->
+      <path fill="url(#sky)" d="M0,200 L0,150 L40,150 L40,120 L70,120 L70,140 L100,140 L100,95 L130,95 L130,150 L160,150 L160,110 L175,110 L175,70 L190,70 L190,110 L220,110 L220,135 L260,135 L260,90 L290,90 L290,60 L300,60 L300,40 L310,40 L310,60 L320,60 L320,90 L350,90 L350,130 L390,130 L390,100 L420,100 L420,145 L450,145 L450,80 L470,80 L470,50 L480,50 L480,20 L486,20 L486,50 L496,50 L496,80 L520,80 L520,120 L560,120 L560,140 L600,140 L600,105 L630,105 L630,75 L660,75 L660,105 L690,105 L690,150 L720,150 L720,110 L750,110 L750,60 L765,60 L765,30 L770,10 L775,30 L775,60 L790,60 L790,110 L830,110 L830,140 L870,140 L870,95 L900,95 L900,120 L940,120 L940,85 L960,85 L960,55 L980,55 L980,85 L1000,85 L1000,130 L1040,130 L1040,100 L1080,100 L1080,145 L1120,145 L1120,115 L1150,115 L1150,70 L1170,70 L1170,45 L1180,45 L1180,70 L1200,70 L1200,115 L1240,115 L1240,140 L1280,140 L1280,105 L1310,105 L1310,125 L1350,125 L1350,90 L1380,90 L1380,150 L1440,150 L1440,200 Z"/>
+      <g fill="#e6b950" opacity="0.35">
+        <rect x="302" y="48" width="3" height="3"/><rect x="312" y="66" width="3" height="3"/><rect x="474" y="58" width="3" height="3"/><rect x="488" y="62" width="3" height="3"/><rect x="756" y="70" width="3" height="3"/><rect x="778" y="82" width="3" height="3"/><rect x="964" y="66" width="3" height="3"/><rect x="1172" y="56" width="3" height="3"/><rect x="176" y="80" width="3" height="3"/><rect x="636" y="86" width="3" height="3"/><rect x="1152" y="80" width="3" height="3"/><rect x="906" y="104" width="3" height="3"/>
+      </g>
+      <polyline points="0,150 120,142 240,146 360,128 480,135 600,118 720,124 840,110 960,116 1080,102 1200,108 1320,94 1440,100" fill="none" stroke="#2fcf6f" stroke-width="2" opacity="0.5"/>
+    </svg>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Latest morning update</h2>
+        <p><a href="updates.html">All updates →</a></p>
+      </div>
+      <div id="latest-update" data-root=""><p class="muted">Loading…</p></div>
+      <p class="small muted" style="margin-top:12px">Posted before the open every trading day. Same format every time: overnight, levels, what's on deck, what I'm doing.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Earnings ahead</h2>
+        <p><a href="dashboard.html">Dashboard →</a></p>
+      </div>
+      <div id="earnings-ahead" class="strip"><span class="muted small">Loading…</span></div>
+      <p class="small muted" style="margin-top:12px">Watchlist names with an earnings date in the next 75 days — my notes, estimates until confirmed. Click one to open it on the dashboard.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What's here</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="meta">Live</div>
+          <h3>Dashboard</h3>
+          <p>Every name on my watchlist as a tile. Click one for the live chart, fundamentals, technicals, and news — plus the earnings and dividend dates I track and my notes on why it's there.</p>
+          <a class="more" href="dashboard.html">Open →</a>
+        </article>
+        <article class="card">
+          <div class="meta">Daily</div>
+          <h3>Morning Update</h3>
+          <p>A short note before the open: what happened overnight, the levels I care about, what's scheduled, and what I plan to do (usually: nothing).</p>
+          <a class="more" href="updates.html">Read →</a>
+        </article>
+        <article class="card">
+          <div class="meta">Playbook</div>
+          <h3>Tips &amp; Secrets</h3>
+          <p>The rules I trade by and the lessons that cost me money to learn. Routine, sizing, entries, exits, earnings season, and the head game.</p>
+          <a class="more" href="tips.html">Read →</a>
+        </article>
+        <article class="card">
+          <div class="meta">Video</div>
+          <h3>Chart walk-throughs</h3>
+          <p>Screen recordings of the watchlist review and post-mortems on trades, good and bad.</p>
+          <a class="more" href="videos.html">Watch →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sister-banner">
+        <div>
+          <h3>When the market's closed: <b>DocDiver</b></h3>
+          <p>My other notebook — dive trips and adventures around the world, with photos, videos, and stories.</p>
+        </div>
+        <a class="btn sister" href="https://docdiver.org/">Visit DocDiver ↗</a>
+      </div>
+    </div>
+  </section>
+
 </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>DocTrader</h4>
+        <p>Dr. Ting's trading notebook: a live watchlist dashboard, a morning update every trading day, and the tips she's learned the hard way. Personal opinion and a record of her own decisions — not advice, not a recommendation, not a solicitation.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="updates.html">Morning Update</a></li>
+          <li><a href="watchlist.html">Watchlist (table)</a></li>
+          <li><a href="tips.html">Tips &amp; Secrets</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="about.html">About &amp; contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://docdiver.org/">DocDiver — her adventures ↗</a></li>
+          <li><a href="about.html#disclaimer">Disclaimer</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Dr. Ting · doctrader.org</span>
+      <span>Not financial advice. Markets involve risk, including loss of principal. Market data widgets by TradingView.</span>
+    </div>
+  </div>
+</footer>
+<script src="data/watchlist.js"></script>
+<script src="data/updates.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

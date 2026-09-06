@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watchlist — DocTrader</title>
+  <meta name="description" content="Dr. Ting's public watchlist as a table: why each name is there, what she's watching for, status, and key dates.">
+  <link rel="canonical" href="https://doctrader.org/watchlist.html">
+  <meta property="og:title" content="Watchlist — DocTrader">
+  <meta property="og:description" content="Dr. Ting's public watchlist as a table: why each name is there, what she's watching for, status, and key dates.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://doctrader.org/assets/img/avatar-square.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0a07'/%3E%3Cpath d='M9 6v20M6 11h6v9H6zM23 4v24M20 9h6v13h-6z' fill='%23e8b84a' stroke='%23e8b84a' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-root="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="DocTrader home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1c1711"/><path d="M9 6v20M6 11h6v9H6zM23 4v24M20 9h6v13h-6z" fill="#e8b84a" stroke="#e8b84a" stroke-width="1.5"/></svg>
+      <span>Doc<b>Trader</b></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="updates.html">Morning Update</a></li>
+      <li><a href="tips.html">Tips &amp; Secrets</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="sister" href="https://docdiver.org/" title="Sister site: Dr. Ting's adventures">DocDiver ↗</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <div>
+          <h1>Watchlist</h1>
+          <p>The whole list as a table — why each name is there, what I'm watching for, status, and key dates. Click a ticker for the live <a href="dashboard.html">dashboard</a> view.</p>
+        </div>
+        <p class="small muted" id="wl-meta"></p>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="disclaimer" style="margin-bottom:22px"><strong>Read this first.</strong> A watchlist is a personal attention list, not advice. Status labels describe <em>my</em> position or intent and nothing else. I may buy, sell, or ignore any of these at any time without updating this page first. <a href="about.html#disclaimer">Full disclaimer →</a></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ticker</th><th>Name</th><th>Why it's on the list</th><th>Watching for</th><th>Status</th><th>Earnings</th><th>Group</th></tr></thead>
+          <tbody id="watchlist-table"></tbody>
+        </table>
+      </div>
+      <div class="grid" style="margin-top:22px">
+        <div class="card">
+          <h3>Status key</h3>
+          <p><span class="pill core">Core</span> Benchmark or long-term holding; not traded around.</p>
+          <p><span class="pill watching">Watching</span> Actively tracking.</p>
+          <p><span class="pill noted">Noted</span> On the radar, lower priority.</p>
+          <p><span class="pill long">Long</span> Holding with a written plan (wrong-at / right-at / time stop).</p>
+          <p><span class="pill trim">Trim</span> Reducing or looking to exit.</p>
+        </div>
+        <div class="card">
+          <h3>How names get on</h3>
+          <p>One sentence of “why,” something observable to watch for, a status, an earnings date, and a review date. Rules in <a href="tips.html#watchlist">Tips &amp; Secrets</a>.</p>
+        </div>
+        <div class="card">
+          <h3>How names come off</h3>
+          <p>The review date passes and I can't re-write the “why” in one sentence — or the thing I was watching for happened and there's nothing left to watch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Removed</h2>
+        <p class="small muted">Kept for honesty.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ticker</th><th>Was on the list because</th><th>Removed</th><th>Why</th></tr></thead>
+          <tbody id="removed-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>DocTrader</h4>
+        <p>Dr. Ting's trading notebook: a live watchlist dashboard, a morning update every trading day, and the tips she's learned the hard way. Personal opinion and a record of her own decisions — not advice, not a recommendation, not a solicitation.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="updates.html">Morning Update</a></li>
+          <li><a href="watchlist.html">Watchlist (table)</a></li>
+          <li><a href="tips.html">Tips &amp; Secrets</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="about.html">About &amp; contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://docdiver.org/">DocDiver — her adventures ↗</a></li>
+          <li><a href="about.html#disclaimer">Disclaimer</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Dr. Ting · doctrader.org</span>
+      <span>Not financial advice. Markets involve risk, including loss of principal. Market data widgets by TradingView.</span>
+    </div>
+  </div>
+</footer>
+<script src="data/watchlist.js"></script>
+<script src="data/updates.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

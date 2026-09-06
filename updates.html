@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morning Update — DocTrader</title>
+  <meta name="description" content="Dr. Ting's morning market update, posted before the open every trading day.">
+  <link rel="canonical" href="https://doctrader.org/updates.html">
+  <meta property="og:title" content="Morning Update — DocTrader">
+  <meta property="og:description" content="Dr. Ting's morning market update, posted before the open every trading day.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://doctrader.org/assets/img/avatar-square.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0a07'/%3E%3Cpath d='M9 6v20M6 11h6v9H6zM23 4v24M20 9h6v13h-6z' fill='%23e8b84a' stroke='%23e8b84a' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-root="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="DocTrader home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1c1711"/><path d="M9 6v20M6 11h6v9H6zM23 4v24M20 9h6v13h-6z" fill="#e8b84a" stroke="#e8b84a" stroke-width="1.5"/></svg>
+      <span>Doc<b>Trader</b></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="updates.html" aria-current="page">Morning Update</a></li>
+      <li><a href="tips.html">Tips &amp; Secrets</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="sister" href="https://docdiver.org/" title="Sister site: Dr. Ting's adventures">DocDiver ↗</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <div>
+          <h1>Morning Update</h1>
+          <p>A short note before the open, every trading day. Same four parts every time so you know where to look: <strong>Overnight</strong>, <strong>Levels</strong>, <strong>On deck</strong>, <strong>What I'm doing</strong>.</p>
+        </div>
+        <p class="small muted"><span id="updates-count"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="legend" style="margin-bottom:22px">
+        <span><i class="dot bull"></i> leaning constructive</span>
+        <span><i class="dot neutral"></i> neutral / mixed</span>
+        <span><i class="dot bear"></i> leaning cautious</span>
+        <span class="muted">— the dot is my read that morning, not a forecast.</span>
+      </div>
+      <div id="updates-list"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="disclaimer"><strong>Not financial advice.</strong> Each update is my opinion on the morning it was written and is never edited afterward. I may hold positions in anything mentioned. <a href="about.html#disclaimer">Full disclaimer →</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>DocTrader</h4>
+        <p>Dr. Ting's trading notebook: a live watchlist dashboard, a morning update every trading day, and the tips she's learned the hard way. Personal opinion and a record of her own decisions — not advice, not a recommendation, not a solicitation.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="updates.html">Morning Update</a></li>
+          <li><a href="watchlist.html">Watchlist (table)</a></li>
+          <li><a href="tips.html">Tips &amp; Secrets</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="about.html">About &amp; contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://docdiver.org/">DocDiver — her adventures ↗</a></li>
+          <li><a href="about.html#disclaimer">Disclaimer</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Dr. Ting · doctrader.org</span>
+      <span>Not financial advice. Markets involve risk, including loss of principal. Market data widgets by TradingView.</span>
+    </div>
+  </div>
+</footer>
+<script src="data/watchlist.js"></script>
+<script src="data/updates.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
