@@ -10,6 +10,22 @@
   });
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 
+  /* Optional Dr. Ting portrait slideshow (home / dashboard / gallery) */
+  var shows = document.querySelectorAll('[data-ting-show]');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  Array.prototype.forEach.call(shows, function (el) {
+    var slides = el.querySelectorAll('img');
+    if (slides.length < 2) return;
+    var i = 0;
+    if (!el.querySelector('.is-on')) slides[0].classList.add('is-on');
+    if (reduceMotion) return;
+    setInterval(function () {
+      slides[i].classList.remove('is-on');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('is-on');
+    }, 4200);
+  });
+
   /* ---------- helpers ---------- */
   var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
