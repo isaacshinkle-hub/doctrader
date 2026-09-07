@@ -26,10 +26,16 @@ Everything is in **`data/watchlist.js`** — one block per ticker. Fields are do
 - `status`: `watching` · `noted` · `core` · `long` · `trim`.
 - To remove a name, delete its block. Optionally add a line to `WATCHLIST_REMOVED` at the bottom so it shows in the "Removed" table.
 
-## Change the avatar
+## Change the avatars
 
-Replace `assets/img/avatar.png` (large, square, transparent or not — shown as a rounded square),
-`assets/img/avatar-face.png` (small circle for bylines), and `assets/img/avatar-square.jpg` (social preview). Same filenames, nothing else to touch.
+Three full portraits and three face crops live in `assets/img/`:
+
+- `avatar-opt-1.png` / `avatar-opt-1-face.png` — gold-chart open (navy tie). Hero + default `avatar.png` / `avatar-face.png`.
+- `avatar-opt-2.png` / `avatar-opt-2-face.png` — charcoal after hours (burgundy tie). About + some bylines.
+- `avatar-opt-3.png` / `avatar-opt-3-face.png` — pale-blue close. Tips / update bylines + the desk slideshow.
+- `avatar-square.jpg` — social preview (OG), cropped from option 1.
+
+`avatar.png` and `avatar-face.png` are copies of option 1 so old paths keep working. The gallery is `avatars.html`. Rotate face crops in bylines; keep the home hero on option 1.
 
 ## Add a video
 
