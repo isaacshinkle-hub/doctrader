@@ -20,6 +20,13 @@
 
 window.UPDATES = [
   {
+    date: "2026-09-09",
+    title: "Mixed tape, oil bid",
+    summary: "SPY +0.08% vs yesterday. QQQ +1.23%. Watching the open; no plan written before the bell.",
+    tone: "neutral",
+    tags: ["Auto"]
+  },
+  {
     date: "2026-09-08",
     title: "Welcome to the Morning Update",
     summary: "What this daily note is, when it posts, and the fixed format I'll use every trading day so you know where to look.",
