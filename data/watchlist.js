@@ -105,11 +105,11 @@ window.WATCHLIST = [
     why: "", watchFor: "",
     earnings: "Nov 2", earningsDate: "2026-11-02", earningsConfirmed: false,
     exDividend: "", dividendYield: "", notes: "", added: "2026-09-06", review: "" },
-  { tv: "NASDAQ:SPCX", name: "SPCX (ticker to verify)", group: "Also tracking", status: "noted",
+  { tv: "NASDAQ:SPCX", name: "SpaceX", group: "Also tracking", status: "noted",
     why: "", watchFor: "",
     earnings: "Nov 3-5", earningsDate: "2026-11-03", earningsConfirmed: false,
     exDividend: "", dividendYield: "",
-    notes: "<em>Ticker copied from notes as written — please confirm the symbol and exchange; the chart won't load until it's right.</em>",
+    notes: "",
     added: "2026-09-06", review: "" }
 ];
 
