@@ -20,6 +20,13 @@
 
 window.UPDATES = [
   {
+    date: "2026-09-11",
+    title: "Indexes bid, oil offered",
+    summary: "SPY +0.85% vs yesterday. QQQ +0.87%. Letting strength show first; no chase.",
+    tone: "bull",
+    tags: ["Auto"]
+  },
+  {
     date: "2026-09-09",
     title: "Mixed tape, oil bid",
     summary: "SPY +0.08% vs yesterday. QQQ +1.23%. Watching the open; no plan written before the bell.",
