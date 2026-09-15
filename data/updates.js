@@ -20,6 +20,13 @@
 
 window.UPDATES = [
   {
+    date: "2026-09-15",
+    title: "Mixed overnight, no chase",
+    summary: "SPY -0.23% vs yesterday. QQQ -0.20%. Watching the open; no plan written before the bell.",
+    tone: "neutral",
+    tags: ["Auto"]
+  },
+  {
     date: "2026-09-14",
     title: "Indexes soft, oil bid",
     summary: "SPY -0.70% vs yesterday. QQQ -1.58%. No new risk from this note.",
